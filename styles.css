@@ -110,6 +110,10 @@
     display: block;
 }
 
+section {
+  display: block;
+}
+
 .align-items-center {
   align-items: center !important;
 }
@@ -125,12 +129,6 @@
   display: flex !important;
 }
 
-  .navbar > .container, .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl {
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: space-between;
-}
 .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
@@ -146,6 +144,7 @@
   padding-left: 1.5rem !important;
 }
 /*fin px*/
+
 /*Paragraphs*/
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
@@ -153,8 +152,8 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-weight: 500;
   line-height: 1.2;
 }
-
 /*fin Paragraphs*/
+
 /*media*/
 
 @media (min-width: 1200px){
@@ -184,6 +183,19 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
     padding-right: 3rem !important;
     padding-left: 3rem !important;
   }
+  #mainNav {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out; /*nav fades when scroll*/
+}
+  .navbar-expand-lg {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+
 }
 @media (min-width: 768px){
   .masthead h1, .masthead .h1 {
@@ -206,7 +218,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   }
 }
 
-
 /*fin media*/
 /*masthead*/
 .masthead {
@@ -215,7 +226,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("C:/Users/esther.hernandez/Documents/Portfolio/myportfolio/images/xeo1.JPG");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("images/xeo1.JPG");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -262,6 +273,83 @@ h1 {
 }
   /*masthead h1*/
 /*fin masthead*/
+/*about*/
+.about-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 10rem;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%), url("images/xeo2.JPG");
+  background-attachment: scroll;
+  background-size: cover;
+  min-height: 35rem;
+}
+/*fin about*/
 
-/*barra superior*/
+/*Navigation*/
+#mainNav {
+  min-height: 3.5rem;
+  background-color: #fff;
+}
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.75rem;
+  color: #64a19d;
+  border: 1px solid #64a19d;
+}
+#mainNav .navbar-toggler:focus {
+  outline: none;
+}
+#mainNav .navbar-brand {
+  color: #000;
+  font-weight: 700;
+  padding: 0.9rem 0;
+}
+#mainNav .navbar-nav .nav-item:hover {
+  color: fade(#fff, 80%);
+  outline: none;
+  background-color: transparent;
+}
+#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+nav {
+  display: block;
+}
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+.fixed-top{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/*fin navigation*/
+/*images*/
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+img, svg {
+  vertical-align: middle;
+}
+
+/*fin images*/
 
